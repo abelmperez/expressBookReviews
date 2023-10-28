@@ -29,7 +29,7 @@ public_users.get('/', function(req, res) {
 // Using async/await
 public_users.get('/', async (req, res) => {
     try {
-      const response = await axios.get('your-api-endpoint-here'); // Replace with your API endpoint
+      const response = await axios.get('https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/'); // Replace with your API endpoint
       res.json(response.data);
     } catch (error) {
       res.status(500).json({ message: 'Error fetching book list' });
@@ -38,7 +38,7 @@ public_users.get('/', async (req, res) => {
 
 // Or, using Promise callbacks
 public_users.get('/promise', (req, res) => {
-    axios.get('your-api-endpoint-here') // Replace with your API endpoint
+    axios.get('https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/') // Replace with your API endpoint
       .then(response => {
         res.json(response.data);
       })
@@ -56,7 +56,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
  public_users.get('/isbn/:isbn', async (req, res) => {
     const isbn = req.params.isbn;
     try {
-      const response = await axios.get(`your-api-endpoint-here/${isbn}`); // Replace with your API endpoint
+      const response = await axios.get(`https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/isbn/${isbn}`); // Replace with your API endpoint
       if (response.data) {
         res.json(response.data);
       } else {
@@ -70,7 +70,7 @@ public_users.get('/isbn/:isbn',function (req, res) {
   // Or, using Promise callbacks
   public_users.get('/isbn/promise/:isbn', (req, res) => {
     const isbn = req.params.isbn;
-    axios.get(`your-api-endpoint-here/${isbn}`) // Replace with your API endpoint
+    axios.get(`https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/isbn/${isbn}`) // Replace with your API endpoint
       .then(response => {
         if (response.data) {
           res.json(response.data);
@@ -110,7 +110,7 @@ public_users.get('/author/:author',function (req, res) {
 public_users.get('/author/:author', async (req, res) => {
     const author = req.params.author;
     try {
-      const response = await axios.get(`your-api-endpoint-here?author=${author}`); // Replace with your API endpoint
+      const response = await axios.get(`https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/author?author=${author}`); // Replace with your API endpoint
       if (response.data) {
         res.json(response.data);
       } else {
@@ -124,7 +124,7 @@ public_users.get('/author/:author', async (req, res) => {
   // Or, using Promise callbacks
   public_users.get('/author/promise/:author', (req, res) => {
     const author = req.params.author;
-    axios.get(`your-api-endpoint-here?author=${author}`) // Replace with your API endpoint
+    axios.get(`https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/author?author=${author}`) // Replace with your API endpoint
       .then(response => {
         if (response.data) {
           res.json(response.data);
@@ -162,7 +162,7 @@ public_users.get('/title/:title',function (req, res) {
 public_users.get('/title/:title', async (req, res) => {
     const title = req.params.title;
     try {
-      const response = await axios.get(`your-api-endpoint-here?title=${title}`); // Replace with your API endpoint
+      const response = await axios.get(`https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/title?title=${title}`); // Replace with your API endpoint
       if (response.data) {
         res.json(response.data);
       } else {
@@ -176,7 +176,7 @@ public_users.get('/title/:title', async (req, res) => {
   // Or, using Promise callbacks
   public_users.get('/title/promise/:title', (req, res) => {
     const title = req.params.title;
-    axios.get(`your-api-endpoint-here?title=${title}`) // Replace with your API endpoint
+    axios.get(`https://grimjoe47-5000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/title?title=${title}`) // Replace with your API endpoint
       .then(response => {
         if (response.data) {
           res.json(response.data);
